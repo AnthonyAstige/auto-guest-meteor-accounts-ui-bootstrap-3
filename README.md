@@ -1,3 +1,5 @@
+# Edited for use with anthonyastige-auto-guest
+
 meteor-accounts-ui-bootstrap-3
 ==============================
 

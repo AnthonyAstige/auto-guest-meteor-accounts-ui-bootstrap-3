@@ -7,9 +7,17 @@
 <template name="_loginButtons">
 	{{#if currentUser}}
 		{{#unless loggingIn}}
-			{{> _loginButtonsLoggedIn}}
+			{{#if isGuest}}
+				{{! AutoGuest: Guest's aren't really logged in}}
+				{{> _loginButtonsLoggedOut}}
+			{{/if}}
+			{{#unless isGuest}}
+				{{! AutoGuest: Registered user gets normal buttons}}
+				{{> _loginButtonsLoggedIn}}
+			{{/unless}}
 		{{/unless}}
 	{{else}}
+		{{! AutoGuest: Should never get here}}
 		{{> _loginButtonsLoggedOut}}
 	{{/if}}
 </template>

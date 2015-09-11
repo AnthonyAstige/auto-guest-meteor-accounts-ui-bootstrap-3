@@ -10,6 +10,13 @@
 		return Template._loginButtons;
 	});
 
+	Template._loginButtons.helpers({
+		isGuest: function() {
+			var user = Meteor.user();
+			return user && user.profile && user.profile.guest;
+		}
+	});
+
 	// shared between dropdown and single mode
 	Template._loginButtons.events({
 		'click #login-buttons-logout': function() {

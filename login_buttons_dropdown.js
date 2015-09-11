@@ -182,6 +182,11 @@
 	Template._loginButtonsLoggedOutDropdown.helpers({
 		forbidClientAccountCreation: function() {
 			return Accounts._options.forbidClientAccountCreation;
+		},
+
+		guestUsername: function() {
+			var user = Meteor.user();
+			return user && user.username;
 		}
 	});
 
@@ -608,7 +613,7 @@
 			return;
 		}
 
-		Accounts.createUser(options, function(error) {
+		AutoGuest.createUser(options, function(error) {
 			if (error) {
 				if (error.reason == 'Signups forbidden'){
 					loginButtonsSession.errorMessage(i18n('errorMessages.signupsForbidden'))
