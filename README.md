@@ -1,4 +1,4 @@
-# Edited for use with anthonyastige-auto-guest
+# Edited for use with [anthonyastige:auto-guest] (https://github.com/AnthonyAstige/auto-guest)
 
 meteor-accounts-ui-bootstrap-3
 ==============================
