@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'anthonyastige:auto-guest-accounts-ui-bootstrap-3',
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
-	version: '1.2.79',
+	version: '1.2.80',
 	git: 'git@github.com:AnthonyAstige/auto-guest-meteor-accounts-ui-bootstrap-3.git'
 })
 
@@ -28,7 +28,7 @@ Package.on_use(function (api) {
 	api.use('accounts-password@1.0.0', {weak: true});
 
 	// AutoGuest support methods
-	api.use('anthonyastige:auto-guest');
+	api.use('anthonyastige:auto-guest@0.0.7');
 
 	api.add_files([
 		'accounts_ui.js',
