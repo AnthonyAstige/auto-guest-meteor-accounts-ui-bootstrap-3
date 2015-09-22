@@ -1,14 +1,14 @@
 Package.describe({
 	name: 'anthonyastige:auto-guest-accounts-ui-bootstrap-3',
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
-	version: '1.2.80',
+	version: '1.2.80_1',
 	git: 'git@github.com:AnthonyAstige/auto-guest-meteor-accounts-ui-bootstrap-3.git'
 })
 
 Package.on_use(function (api) {
 	api.use(['session@1.0.0',
 		'spacebars@1.0.0',
-		'stylus@1.0.0',
+		'stylus@2.511.0_1',
 		'accounts-base@1.0.0',
 		'underscore@1.0.0',
 		'templating@1.0.0',
